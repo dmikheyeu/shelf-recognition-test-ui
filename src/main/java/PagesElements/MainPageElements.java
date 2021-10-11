@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class MainPageElement {
+public class MainPageElements {
     public SelenideElement enterEmail = $x("//*[contains(@placeholder,'Enter email')]");
     public SelenideElement enterPassword = $x("//*[contains(@placeholder,'password')]");
     public SelenideElement forgotPassword = $x("//*[contains(text(),'Forgot your password?')]");
