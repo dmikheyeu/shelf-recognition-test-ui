@@ -1,14 +1,25 @@
 package Pages;
 
+import PagesElements.ManagerPageElements;
 import io.qameta.allure.Step;
+
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class ManagerFlow extends MainPage {
 
-    @Step("User enters username and password")
-    public CustomersFlow entersUsernameAndPasswordViaManager() {
-        mainPageElement.enterEmail.setValue("mid+AutoManagerEmail12@unicsoft.com");
-        mainPageElement.enterPassword.setValue("QwertY22");
-        mainPageElement.loginButton.click();
-        return new CustomersFlow().createCustomer();
+    ManagerPageElements managerPageElements = new ManagerPageElements();
+
+    @Step("Accept invite code")
+    public void createPasswordFromManager() {
+        managerPageElements.shelfRecognitionIcon.shouldHave().isDisplayed();
+        sleep(500);
+        managerPageElements.firstEnterPassword.click();
+        managerPageElements.firstEnterPassword.setValue("QwertY12");
+        managerPageElements.repeatEnterPassword.setValue("QwertY12");
     }
+
+//    @Step("Enter login and password")
+//    public void enterLoginAndPassword() {
+//
+//    }
 }

@@ -5,6 +5,7 @@ import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 
 public class CustomersFlow {
+
     CustomersPageElements customersPageElements = new CustomersPageElements();
 
     @Step("Check that User open 'create' Customers page")
@@ -37,7 +38,8 @@ public class CustomersFlow {
 
     @Step("Click on created Company Name")
     public CustomersFlow addProductForCustomers() {
-        customersPageElements.companyName.click();
+//        customersPageElements.companyName.click();
+        customersPageElements.autoCompanyName.click();
         customersPageElements.customersAndNameOfCompanyOpened.shouldHave().isDisplayed();
         customersPageElements.tableWithInfoAboutAllProducts.shouldHave().isDisplayed();
         customersPageElements.addProductButton.shouldHave().isDisplayed();
@@ -74,7 +76,7 @@ public class CustomersFlow {
         customersPageElements.addManagerButton.click();
         customersPageElements.managerName.setValue("AutoManagerName");
         customersPageElements.managerSurname.setValue("AutoManagerSurname");
-        customersPageElements.managerEmail.setValue("mid+AutoManagerEmail12@unicsoft.com");
+        customersPageElements.managerEmail.setValue("mid+AutoManager69AB@unicsoft.com");
         customersPageElements.managerPhone.setValue("+507-655-598-40");
         customersPageElements.saveButton.click();
         return checkCreatedNewManager();
@@ -84,8 +86,8 @@ public class CustomersFlow {
     public CustomersFlow checkCreatedNewManager() {
         customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("AutoManagerName"));
         customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("AutoManagerSurname"));
-        customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("mid+AutoManagerEmail1@unicsoft.com"));
-        customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("+507-655-598-40"));
+//        customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("mid+AutoManager69A@unicsoft.com"));
+        customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("+507 6555-9840"));
         return this;
     }
 }

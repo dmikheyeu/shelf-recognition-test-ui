@@ -31,7 +31,7 @@ public class CustomersPageElements {
     public SelenideElement brandName = $x("(//*[contains(@formcontrolname, 'brandId')])");
     public SelenideElement size = $x("(//*[contains(@formcontrolname, 'packageSize')])");
     public SelenideElement productCategory = $x("(//*[contains(@formcontrolname, 'productCategoryId')])");
-    public SelenideElement productCategoryDigestive = $x("//*[contains(text(), 'Digestive')]");
+    public SelenideElement productCategoryDigestive = $x("//*[contains(text(), 'DIGESTIVE')]");
     public SelenideElement productCode = $x("(//*[contains(@formcontrolname, 'code')])");
 
     public SelenideElement managersButton = $x("//*[contains(text(), ' Managers ')]");

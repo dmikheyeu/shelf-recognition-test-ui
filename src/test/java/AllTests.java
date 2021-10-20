@@ -18,9 +18,27 @@ public class AllTests extends MainPage {
     }
 
     @Test
-    @DisplayName("Login via Manager/Employee")
-    public void loginViaManager() {
+    @DisplayName("Open Gmail Post")
+    public void acceptInviteFromGmail() {
+        initPage.gmail.acceptInviteFromGmail();
+    }
+
+    @Test
+    @DisplayName("Login as Manager/Employee")
+    public void loginAsManager() {
         openSite();
-        initPage.managerFlow.entersUsernameAndPasswordViaManager();
+
+    }
+
+    @Test
+    @DisplayName("A to B Test")
+    public void fullFlow() {
+//        openSite();
+//        entersUsernameAndPasswordViaAdmin();
+//        initPage.addCustomersPage.createNewCustomer();
+//        initPage.addCustomersPage.addProductForCustomers();
+//        initPage.addCustomersPage.createNewManager();
+        initPage.gmail.acceptInviteFromGmail();
+        initPage.managerFlow.createPasswordFromManager();
     }
 }

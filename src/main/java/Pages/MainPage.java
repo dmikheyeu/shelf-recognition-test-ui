@@ -28,7 +28,7 @@ public class MainPage extends DriverConfig {
     @Step("User enters username and password")
     public CustomersFlow entersUsernameAndPasswordViaAdmin() {
         mainPageElement.enterEmail.setValue("mid@unicsoft.com");
-        mainPageElement.enterPassword.setValue("QwertY22");
+        mainPageElement.enterPassword.setValue("QwertY12");
         mainPageElement.loginButton.click();
         return new CustomersFlow().createCustomer();
     }
