@@ -10,16 +10,25 @@ public class ManagerFlow extends MainPage {
     ManagerPageElements managerPageElements = new ManagerPageElements();
 
     @Step("Accept invite code")
-    public void createPasswordFromManager() {
+    public ManagerFlow createPasswordFromManager() {
         managerPageElements.shelfRecognitionIcon.shouldHave().isDisplayed();
-        sleep(500);
-        managerPageElements.firstEnterPassword.click();
-        managerPageElements.firstEnterPassword.setValue("QwertY12");
-        managerPageElements.repeatEnterPassword.setValue("QwertY12");
+        managerPageElements.firstEnterPasswordAsManager.setValue("QwertY14");
+        managerPageElements.repeatEnterPasswordAsManager.setValue("QwertY14");
+        managerPageElements.saveButton.click();
+        return enterLoginAndPassword();
     }
 
-//    @Step("Enter login and password")
-//    public void enterLoginAndPassword() {
-//
-//    }
+    @Step("Enter login and password")
+    public ManagerFlow enterLoginAndPassword() {
+                mainPageElement.logoButton.shouldHave().isDisplayed();
+                mainPageElement.enterEmail.shouldHave().isDisplayed();
+                mainPageElement.enterPassword.shouldHave().isDisplayed();
+                mainPageElement.loginButton.shouldHave().isDisplayed();
+
+                mainPageElement.enterEmail.setValue("mid+AutoManager7123@unicsoft.com");
+                mainPageElement.enterPassword.setValue("QwertY14");
+                mainPageElement.loginButton.click();
+                sleep(5000);
+        return this;
+    }
 }

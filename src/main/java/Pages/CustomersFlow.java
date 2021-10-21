@@ -1,12 +1,14 @@
 package Pages;
 
 import PagesElements.CustomersPageElements;
+import PagesElements.ManagerPageElements;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 
 public class CustomersFlow {
 
     CustomersPageElements customersPageElements = new CustomersPageElements();
+    ManagerPageElements managerPageElements = new ManagerPageElements();
 
     @Step("Check that User open 'create' Customers page")
     public CustomersFlow createCustomer() {
@@ -38,7 +40,6 @@ public class CustomersFlow {
 
     @Step("Click on created Company Name")
     public CustomersFlow addProductForCustomers() {
-//        customersPageElements.companyName.click();
         customersPageElements.autoCompanyName.click();
         customersPageElements.customersAndNameOfCompanyOpened.shouldHave().isDisplayed();
         customersPageElements.tableWithInfoAboutAllProducts.shouldHave().isDisplayed();
@@ -76,9 +77,11 @@ public class CustomersFlow {
         customersPageElements.addManagerButton.click();
         customersPageElements.managerName.setValue("AutoManagerName");
         customersPageElements.managerSurname.setValue("AutoManagerSurname");
-        customersPageElements.managerEmail.setValue("mid+AutoManager69AB@unicsoft.com");
+        customersPageElements.managerEmail.setValue("mid+AutoManager7123@unicsoft.com");
         customersPageElements.managerPhone.setValue("+507-655-598-40");
         customersPageElements.saveButton.click();
+        String managerEmail = managerPageElements.saveManagerEmail.getText();
+        System.out.println("managerEmail " + managerEmail);
         return checkCreatedNewManager();
     }
 

@@ -1,7 +1,6 @@
 package Pages;
 
 import PagesElements.MainPageElements;
-
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.open;
