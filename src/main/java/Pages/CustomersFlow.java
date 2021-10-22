@@ -69,6 +69,8 @@ public class CustomersFlow {
         return this;
     }
 
+    String managerEmail;
+
     @Step("Create new Manager")
     public CustomersFlow createNewManager() {
         customersPageElements.managersButton.click();
@@ -77,10 +79,10 @@ public class CustomersFlow {
         customersPageElements.addManagerButton.click();
         customersPageElements.managerName.setValue("AutoManagerName");
         customersPageElements.managerSurname.setValue("AutoManagerSurname");
-        customersPageElements.managerEmail.setValue("mid+AutoManager7123@unicsoft.com");
+        customersPageElements.managerEmail.setValue("mid+AutoManager88@unicsoft.com");
         customersPageElements.managerPhone.setValue("+507-655-598-40");
         customersPageElements.saveButton.click();
-        String managerEmail = managerPageElements.saveManagerEmail.getText();
+        managerEmail = managerPageElements.saveManagerEmail.getText();
         System.out.println("managerEmail " + managerEmail);
         return checkCreatedNewManager();
     }
@@ -89,7 +91,7 @@ public class CustomersFlow {
     public CustomersFlow checkCreatedNewManager() {
         customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("AutoManagerName"));
         customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("AutoManagerSurname"));
-//        customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("mid+AutoManager69A@unicsoft.com"));
+//        customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.name(managerEmail));
         customersPageElements.tableWithInfoAboutCreatedManager.shouldHave(Condition.text("+507 6555-9840"));
         return this;
     }

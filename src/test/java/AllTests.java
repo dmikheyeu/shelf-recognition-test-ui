@@ -11,11 +11,13 @@ public class AllTests extends MainPage {
     @DisplayName("A to B Test")
     public void fullFlow() {
         openSite();
-        entersUsernameAndPasswordViaAdmin();
+        entersUsernameAndPasswordAsAdmin();
         initPage.addCustomersPage.createNewCustomer();
         initPage.addCustomersPage.addProductForCustomers();
         initPage.addCustomersPage.createNewManager();
         initPage.gmail.acceptInviteFromGmail();
         initPage.managerFlow.createPasswordFromManager();
+        initPage.employeeFlow.createNewEmployee();
+        initPage.gmail.acceptInviteFromGmail();
     }
 }

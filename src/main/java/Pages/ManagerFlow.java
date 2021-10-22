@@ -3,8 +3,6 @@ package Pages;
 import PagesElements.ManagerPageElements;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Selenide.sleep;
-
 public class ManagerFlow extends MainPage {
 
     ManagerPageElements managerPageElements = new ManagerPageElements();
@@ -28,7 +26,6 @@ public class ManagerFlow extends MainPage {
                 mainPageElement.enterEmail.setValue("mid+AutoManager7123@unicsoft.com");
                 mainPageElement.enterPassword.setValue("QwertY14");
                 mainPageElement.loginButton.click();
-                sleep(5000);
         return this;
     }
 }

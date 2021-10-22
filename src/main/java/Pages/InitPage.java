@@ -1,9 +1,6 @@
 package Pages;
 
-import PagesElements.CustomersPageElements;
-import PagesElements.GmailPageElements;
-import PagesElements.MainPageElements;
-import PagesElements.ManagerPageElements;
+import PagesElements.*;
 
 public class InitPage {
 
@@ -15,4 +12,6 @@ public class InitPage {
     public Gmail gmail = new Gmail();
     public GmailPageElements gmailPageElements = new GmailPageElements();
     public ManagerPageElements managerPageElements = new ManagerPageElements();
+    public EmployeeFlow employeeFlow = new EmployeeFlow();
+    public EmployeesPageElements employeesPageElements = new EmployeesPageElements();
 }
