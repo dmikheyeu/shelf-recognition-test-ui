@@ -7,13 +7,12 @@ import PagesElements.ManagerPageElements;
 
 public class InitPage {
 
-    public CustomersFlow addCustomersPage = new CustomersFlow();
-    public Gmail gmail = new Gmail();
     public MainPage mainPage = new MainPage();
-    public ManagerFlow managerFlow = new ManagerFlow();
-
-    public CustomersPageElements customersPageElements = new CustomersPageElements();
-    public GmailPageElements gmailPageElements = new GmailPageElements();
     public MainPageElements mainPageElement = new MainPageElements();
+    public CustomersFlow addCustomersPage = new CustomersFlow();
+    public CustomersPageElements customersPageElements = new CustomersPageElements();
+    public ManagerFlow managerFlow = new ManagerFlow();
+    public Gmail gmail = new Gmail();
+    public GmailPageElements gmailPageElements = new GmailPageElements();
     public ManagerPageElements managerPageElements = new ManagerPageElements();
 }
