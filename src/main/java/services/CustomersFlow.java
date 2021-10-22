@@ -1,11 +1,20 @@
-package Pages;
+package services;
 
-import PagesElements.CustomersPageElements;
-import PagesElements.ManagerPageElements;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
+import page.CustomersPageElements;
+import page.ManagerPageElements;
+
+import static util.StringGeneratorUtil.generateString;
 
 public class CustomersFlow {
+
+    private static final String MANAGER_NAME_PREFIX = "AutoManagerName";
+    private static final String MANAGER_SURNAME_PREFIX = "AutoManagerSurname";
+    private static final String MANAGER_EMAIL_PREFIX = "mid+AutoManager_";
+    private static final String MANAGER_EMAIL_POSTFIX = "@unicsoft.com";
+
+
 
     CustomersPageElements customersPageElements = new CustomersPageElements();
     ManagerPageElements managerPageElements = new ManagerPageElements();
@@ -77,10 +86,11 @@ public class CustomersFlow {
         customersPageElements.tableWithInfoAboutAllManagers.shouldHave().isDisplayed();
         customersPageElements.popupWithAddNewManager.shouldHave().isDisplayed();
         customersPageElements.addManagerButton.click();
-        customersPageElements.managerName.setValue("AutoManagerName");
-        customersPageElements.managerSurname.setValue("AutoManagerSurname");
-        customersPageElements.managerEmail.setValue("mid+AutoManager88@unicsoft.com");
+        customersPageElements.managerName.setValue(MANAGER_NAME_PREFIX + generateString());
+        customersPageElements.managerSurname.setValue(MANAGER_SURNAME_PREFIX + generateString());
+        customersPageElements.managerEmail.setValue(MANAGER_EMAIL_PREFIX + generateString() + MANAGER_EMAIL_POSTFIX);
         customersPageElements.managerPhone.setValue("+507-655-598-40");
+
         customersPageElements.saveButton.click();
         managerEmail = managerPageElements.saveManagerEmail.getText();
         System.out.println("managerEmail " + managerEmail);

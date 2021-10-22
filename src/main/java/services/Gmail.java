@@ -1,6 +1,6 @@
-package Pages;
+package services;
 
-import PagesElements.GmailPageElements;
+import page.GmailPageElements;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.*;

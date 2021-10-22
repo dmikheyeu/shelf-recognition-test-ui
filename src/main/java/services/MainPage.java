@@ -1,6 +1,6 @@
-package Pages;
+package services;
 
-import PagesElements.MainPageElements;
+import page.MainPageElements;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -27,7 +27,7 @@ public class MainPage extends DriverConfig {
     @Step("User enters username and password")
     public CustomersFlow entersUsernameAndPasswordAsAdmin() {
         mainPageElement.enterEmail.setValue("mid@unicsoft.com");
-        mainPageElement.enterPassword.setValue("QwertY12");
+        mainPageElement.enterPassword.setValue("QwertY14");
         mainPageElement.loginButton.click();
         return new CustomersFlow().createCustomer();
     }

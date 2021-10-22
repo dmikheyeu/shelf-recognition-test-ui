@@ -1,6 +1,6 @@
-package Pages;
+package services;
 
-import PagesElements.EmployeesPageElements;
+import page.EmployeesPageElements;
 import io.qameta.allure.Step;
 
 public class EmployeeFlow {
@@ -25,6 +25,5 @@ public class EmployeeFlow {
         employeesPageElements.fieldPhoneEmployee.setValue("+507-655-598-40");
         employeesPageElements.saveButton.click();
 //        employeesPageElements.infoAboutEmployee.shouldHave(Condition.name(employeeEmail));
-
     }
 }

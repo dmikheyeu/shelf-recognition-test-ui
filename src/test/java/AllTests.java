@@ -1,7 +1,7 @@
-import Pages.InitPage;
-import Pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import services.InitPage;
+import services.MainPage;
 
 public class AllTests extends MainPage {
 

@@ -1,6 +1,6 @@
-package Pages;
+package services;
 
-import PagesElements.*;
+import page.*;
 
 public class InitPage {
 

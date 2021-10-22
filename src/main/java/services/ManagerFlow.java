@@ -1,6 +1,6 @@
-package Pages;
+package services;
 
-import PagesElements.ManagerPageElements;
+import page.ManagerPageElements;
 import io.qameta.allure.Step;
 
 public class ManagerFlow extends MainPage {

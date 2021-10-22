@@ -1,4 +1,4 @@
-package Pages;
+package services;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
