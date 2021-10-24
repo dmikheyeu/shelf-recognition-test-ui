@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import services.InitPage;
-import services.MainPage;
+import service.InitPage;
+import service.MainPage;
 
 public class AllTests extends MainPage {
 
@@ -15,9 +15,9 @@ public class AllTests extends MainPage {
         initPage.addCustomersPage.createNewCustomer();
         initPage.addCustomersPage.addProductForCustomers();
         initPage.addCustomersPage.createNewManager();
-        initPage.gmail.acceptInviteFromGmail();
+        initPage.gmail.acceptFirstInviteFromGmail();
         initPage.managerFlow.createPasswordFromManager();
         initPage.employeeFlow.createNewEmployee();
-        initPage.gmail.acceptInviteFromGmail();
+        initPage.gmail.acceptSecondInviteFromGmail();
     }
 }

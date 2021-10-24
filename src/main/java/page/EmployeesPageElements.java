@@ -16,9 +16,9 @@ public class EmployeesPageElements {
     public SelenideElement infoAboutEmployee = $x("//*[contains(@class,'ant-table-thead ng-star-inserted')]");
     public SelenideElement addButton = $x("//*[contains(text(),' Add ')]");
 
-    public SelenideElement fieldNameEmployee = $x("//*[contains(text(),' Add ')]");
-    public SelenideElement fieldSurnameEmployee = $x("//*[contains(text(),' Add ')]");
-    public SelenideElement fieldEmailEmployee = $x("//*[contains(text(),' Add ')]");
-    public SelenideElement fieldPhoneEmployee = $x("//*[contains(text(),' Add ')]");
-    public SelenideElement saveButton = $x("//*[contains(text(),' Add ')]");
+    public SelenideElement fieldNameEmployee = $x("//*[contains(@formcontrolname,'name')]");
+    public SelenideElement fieldSurnameEmployee = $x("//*[contains(@formcontrolname,'surname')]");
+    public SelenideElement fieldEmailEmployee = $x("//*[contains(@formcontrolname,'email')]");
+    public SelenideElement fieldPhoneEmployee = $x("//*[contains(@formcontrolname,'phone')]");
+    public SelenideElement saveButton = $x("//*[contains(text(),' Save ')]");
 }

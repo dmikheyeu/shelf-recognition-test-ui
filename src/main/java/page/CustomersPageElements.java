@@ -17,13 +17,13 @@ public class CustomersPageElements {
     public SelenideElement saveButton = $x("//*[contains(text(), 'Save')]");
     public SelenideElement addButton = $x("//*[contains(@class, 'icon add-btn ant-btn ng-star-inserted')]");
 
-    public SelenideElement autoCompanyName = $x("//*[contains(text(), 'AutoCompanyName')]");
-    public SelenideElement autoFirstBrand = $x("//*[contains(text(), 'AutoBrandName_1')]");
-    public SelenideElement autoSecondBrand = $x("//*[contains(text(), 'AutoBrandName_2')]");
+    public SelenideElement autoCompanyName = $x("//*[contains(text(), 'CompanyName')]");
+    public SelenideElement autoBrandName = $x("//*[contains(text(), 'BrandName')]");
 
     public SelenideElement customersAndNameOfCompanyOpened = $x("//*[contains(@class, 'customer-layout custom-page-header ng-star-inserted')]");
     public SelenideElement tableWithInfoAboutAllProducts = $x("//*[contains(@class, 'ant-table-row ng-star-inserted')]");
     public SelenideElement tableWithInfoAboutCreatedProduct = $x("//*[contains(@class, 'ant-table-tbody ng-star-inserted')]");
+//    public SelenideElement tableWithInfoAboutCreatedProduct = $x("//*[contains(@class, 'inner-content')]");
     public SelenideElement addProductButton = $x("//*[contains(text(),' Add Product ')]");
 
     public SelenideElement popupWithAddNewProduct = $x("//*[contains(@class, 'ant-drawer-body')]");

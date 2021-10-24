@@ -9,5 +9,4 @@ public class ManagerPageElements {
     public SelenideElement repeatEnterPasswordAsManager = $x("//*[contains(@placeholder,'Repeat your password')]");
     public SelenideElement shelfRecognitionIcon = $x("//*[contains(text(),' Shelf Recognition ')]");
     public SelenideElement saveButton = $x("//*[contains(text(),' Save ')]");
-    public SelenideElement saveManagerEmail = $x("//*[contains(text(),'mid+')]");
 }

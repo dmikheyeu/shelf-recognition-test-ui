@@ -1,4 +1,4 @@
-package services;
+package service;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -17,8 +17,8 @@ public class DriverConfig {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
         Configuration.startMaximized = true;
         Configuration.baseUrl="https://dev.marketcapp.ai/login";
-        Configuration.timeout = 7000;
-        Configuration.pageLoadTimeout = 5000;
+        //Configuration.timeout = 7000;
+        Configuration.pageLoadTimeout = 60000;
     }
 
     @AfterAll
